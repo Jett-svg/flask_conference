@@ -1,7 +1,23 @@
 {% extends 'base.html' %}
+{% block title %}Успех - IT Conference 2026{% endblock %}
+
 {% block content %}
+<div class="card" style="text-align: center;">
     <h1>🎉 Регистрация успешна!</h1>
-    <p>Спасибо, <b>{{ name }}</b>! Мы отправили подтверждение на <b>{{ email }}</b>.</p>
-    <p>Вы выбрали тариф: <b>{{ ticket|upper }}</b>.</p>
-    <p>К оплате: <b>{{ price }} ₽</b>.</p>
+    <div class="alert alert-success">
+        <p style="margin: 0; font-size: 1.2rem;">
+            Спасибо, <strong>{{ name }}</strong>! Мы отправили подтверждение на <strong>{{ email }}</strong>.
+        </p>
+    </div>
+
+    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light); border-radius: 12px;">
+        <h3>Детали регистрации</h3>
+        <p style="font-size: 1.1rem; margin-top: 1rem;">
+            Тариф: <strong style="color: var(--primary);">{{ ticket|upper }}</strong><br>
+            К оплате: <strong style="color: var(--success); font-size: 1.3rem;">{{ price }} ₽</strong>
+        </p>
+    </div>
+
+    <a href="{{ url_for('index') }}" class="btn" style="margin-top: 2rem;">На главную</a>
+</div>
 {% endblock %}

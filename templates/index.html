@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
+{% block title %}Главная - IT Conference 2026{% endblock %}
+
 {% block content %}
-    <h1>Добро пожаловать на IT Conference 2026!</h1>
-    <p>Крупнейшее событие в мире технологий. Успейте зарегистрироваться!</p>
+<div class="card">
+    <h1>Добро пожаловать на IT Conference 2026! 🎉</h1>
+    <p>Крупнейшее событие в мире технологий. Присоединяйтесь к ведущим экспертам индустрии и узнайте о будущих трендах.</p>
+
+    <div class="speaker-grid">
+        <div class="speaker-card">
+            <div class="speaker-avatar">🤖</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Новейшие достижения в области искусственного интеллекта</p>
+        </div>
+        <div class="speaker-card">
+            <div class="speaker-avatar">🚀</div>
+            <h3>Space Tech</h3>
+            <p>Космические технологии и будущее человечества</p>
+        </div>
+        <div class="speaker-card">
+            <div class="speaker-avatar"></div>
+            <h3>Cybersecurity</h3>
+            <p>Защита данных в цифровую эпоху</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="{{ url_for('register') }}" class="btn">Зарегистрироваться</a>
+    </div>
+</div>
 {% endblock %}

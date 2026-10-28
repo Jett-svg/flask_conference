@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
+{% block title %}Контакты - IT Conference 2026{% endblock %}
+
 {% block content %}
+<div class="card">
     <h1>Контакты организаторов</h1>
-    <p>Email: info@itconf2026.ru</p>
-    <p>Телефон: +7 (999) 123-45-67</p>
+    <p>Свяжитесь с нами любым удобным способом</p>
+
+    <div style="margin-top: 2rem;">
+        <div class="form-group">
+            <label>📧 Email</label>
+            <p><a href="mailto:info@itconf2026.ru" style="color: var(--primary);">info@itconf2026.ru</a></p>
+        </div>
+
+        <div class="form-group">
+            <label>📱 Телефон</label>
+            <p>+7 (999) 123-45-67</p>
+        </div>
+
+        <div class="form-group">
+            <label> Адрес</label>
+            <p>г. Москва, ул. Технологическая, д. 42</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
