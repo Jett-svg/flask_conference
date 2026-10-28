@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>🎉 Регистрация успешна!</h1>
+    <p>Спасибо, <b>{{ name }}</b>! Мы отправили подтверждение на <b>{{ email }}</b>.</p>
+    <p>Вы выбрали тариф: <b>{{ ticket|upper }}</b>.</p>
+    <p>К оплате: <b>{{ price }} ₽</b>.</p>
+{% endblock %}

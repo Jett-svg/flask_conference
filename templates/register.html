@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Регистрация на конференцию</h1>
+
+    <!-- Вывод ошибки, если валидация не прошла -->
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <!-- HTML-форма для ввода данных -->
+    <form method="POST" action="{{ url_for('register') }}">
+        <label>Ваше имя:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Тип билета:</label><br>
+        <select name="ticket">
+            <option value="basic">Basic (1500 ₽)</option>
+            <option value="pro">Pro (3500 ₽)</option>
+            <option value="vip">VIP (7000 ₽)</option>
+        </select><br><br>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+{% endblock %}
